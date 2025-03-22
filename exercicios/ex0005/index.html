@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios com trings</title>
+</head>
+<body>
+    <script>
+        const NOME = prompt('Digite o seu nome completo: ');
+        let nomeLetras = NOME.replace(/[' ']/g, '');  // Removendo espaços em branco
+        nomeQtdLetras = nomeLetras.length;  // Pegando a quantidade de letras
+        const NOME_MINUSCULO_TRATAMENTO = nomeLetras.toLowerCase();  // Tratando dados
+        const NOME_MAIUSCULO = NOME.toUpperCase();
+        const NOME_MINUSCULO = NOME.toLowerCase();
+        const SEGUNDA_LETRA = NOME[1];  // Pegando a segunda letra do nome
+        const PRIMEIRO_INDICE = NOME_MINUSCULO_TRATAMENTO.indexOf('d');
+        const ULTIMO_INDICE = NOME_MINUSCULO_TRATAMENTO.lastIndexOf('d');
+        const ULTIMAS_TRES_LETRAS = NOME_MINUSCULO_TRATAMENTO.slice(-3);
+        const PALAVRAS_NOME = NOME.split(' ');
+        
+        console.log(nomeLetras, nomeQtdLetras)
+        document.body.innerHTML = `Muito prazer, <strong>${NOME}</strong>!<br>`;
+        document.body.innerHTML += `Seu nome tem ${nomeQtdLetras} letras <br />`;
+        document.body.innerHTML += `A segunda letra do seu nome é: ${SEGUNDA_LETRA}<br />`;
+        document.body.innerHTML += `Qual o primeiro índice da letra "D" no seu nome? ${PRIMEIRO_INDICE}<br />`;
+        document.body.innerHTML += `Qual o último índice da letra "D" no seu nome? ${ULTIMO_INDICE}<br />`;
+        document.body.innerHTML += `As últimas 3 letras do seu nome são: ${ULTIMAS_TRES_LETRAS}<br />`;
+        document.body.innerHTML += `As palavras do seu nome são: ${PALAVRAS_NOME}<br />`;
+        document.body.innerHTML += `Seu nome com letras maiúsculas: ${NOME_MAIUSCULO}<br />`;
+        document.body.innerHTML += `Seu nome com letras minúsculas: ${NOME_MINUSCULO}<br />`;
+        
+    </script>
+</body>
+</html>
