@@ -18,18 +18,18 @@ console.log('Segundos', dataEmString.getSeconds());  // Segundos
 console.log('Milisegundos', dataEmString.getMilliseconds());  // Milisegundos
 console.log('Dia da semana', dataEmString.getDay());  // Obtém o dia da semana (Domingo começa no 0, 6 - Sábado)
 
-function zeroAEsquerda(numero) {  // Criando uma função para crescentar um zero a esquerda, caso o numero seja menor do que 10.
+function formataZeroAEsquerda(numero) {  // Criando uma função para crescentar um zero a esquerda, caso o numero seja menor do que 10.
     return numero < 10 ? `0${numero}` : numero;
 }
 
 function formataData(data) {  // Criando uma função para exibir a data formatada
-    const dia = zeroAEsquerda(data.getDate());
-    const mes = zeroAEsquerda(data.getMonth() + 1);
-    const ano = zeroAEsquerda(data.getFullYear());
+    const dia = formataZeroAEsquerda(data.getDate());
+    const mes = formataZeroAEsquerda(data.getMonth() + 1);
+    const ano = formataZeroAEsquerda(data.getFullYear());
 
-    const hora = zeroAEsquerda(data.getHours());
-    const minutos = zeroAEsquerda(data.getMinutes());
-    const segundos = zeroAEsquerda(data.getSeconds());
+    const hora = formataZeroAEsquerda(data.getHours());
+    const minutos = formataZeroAEsquerda(data.getMinutes());
+    const segundos = formataZeroAEsquerda(data.getSeconds());
 
     return `${dia}/${mes}/${ano} ${hora}:${minutos}:${segundos}`;
 }
