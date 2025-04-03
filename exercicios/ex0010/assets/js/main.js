@@ -6,15 +6,17 @@ const elementos = [
 ]
 
 const container = document.querySelector('.container');
-const div = container.appendChild(document.createElement('div'));
+const div = document.createElement('div');
+
 for (let index = 0; index < elementos.length; index++) {
     // const tag = elementos[index].tag;
     // const texto = elementos[index].texto;
-
+    
     const { tag, texto } = elementos[index];  // Atribuição por desestruturação
-    const textoCriado = document.createTextNode(texto);
     const tagCriada = document.createElement(tag);
     
-    tagCriada.appendChild(textoCriado);
+    tagCriada.textContent = texto;
     div.appendChild(tagCriada);
 }
+
+container.appendChild(div);  // Mais interessante adicionar toda a div no final, consome menos recursos
