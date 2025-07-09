@@ -1,0 +1,11 @@
+2.       1.       0
+major    minor    patch
+
+Se eu apenas corrigi algum bug, então a versão mudaria o patch
+2.1.1
+
+Se eu criei alguma feature nova, etnão a versão mudaria o minor
+2.2.0
+
+Se houve uma mudança muito brusca e pode comprometer a compatibilidade e a estabilidade do sistema, então major muda
+3.0.0
